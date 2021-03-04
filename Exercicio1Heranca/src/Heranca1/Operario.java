@@ -31,17 +31,25 @@ public class Operario extends Pessoa{
 		this.salario=salario;
 	}
 	
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
 	public double comissaoSalarial()
 	{
-		salario = salario + valorProducao*(comissao/100);
-		return salario;
+		double sal = salario + valorProducao*(comissao/100);
+		return sal;
 	}
 	
 	public String formatarComissaoSalarial()
 	{
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		nf.setMinimumFractionDigits(2);
-		String moedaFormatada = nf.format(salario);
+		String moedaFormatada = nf.format(comissaoSalarial());
 		return moedaFormatada;
 	}
 

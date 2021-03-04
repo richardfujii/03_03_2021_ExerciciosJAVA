@@ -44,4 +44,29 @@ public class Vendedor extends Pessoa{
 		String salarioFormatado = nf.format(comissaoSalarial());
 		return salarioFormatado;
 	}
+
+	public double getValorVendas() {
+		return valorVendas;
+	}
+
+	public void setValorVendas(double valorVendas) {
+		this.valorVendas = valorVendas;
+	}
+
+	public double getComissao() {
+		return comissao;
+	}
+
+	public void setComissao(double comissao) {
+		this.comissao = comissao;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
 }
